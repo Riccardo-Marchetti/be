@@ -16,8 +16,11 @@ public class CorsConfig {
     CorsConfigurationSource corsConfigurationSource(){
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOrigins(Arrays.asList("http://31.97.47.207", "http://localhost:5173", "http://testpiastrellista.local"));
-        config.setAllowedMethods(Arrays.asList("*"));
+        config.setAllowedOriginPatterns(Arrays.asList("http://31.97.47.207", "http://localhost:5173", "http://testpiastrellista.local"));
+        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(Arrays.asList("*"));
+        config.setAllowCredentials(true);
+
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
