@@ -62,7 +62,7 @@ public class JWTFilter extends OncePerRequestFilter {
         // Escludi i GET su /blog e /blog/**
         return pathMatcher.match("/auth/**", path) ||
                 (method.equals("GET") && (pathMatcher.match("/blog", path) || pathMatcher.match("/blog/**", path))) ||
-                pathMatcher.match("/bettellipavimenti/**", path);
+                pathMatcher.match("/testpiastrellista/**", path);
     }
 
 }

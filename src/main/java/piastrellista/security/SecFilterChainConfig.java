@@ -32,7 +32,7 @@ public class SecFilterChainConfig {
         // ALLOW ALL REQUESTS TO PASS THROUGH THE FILTER CHAIN, ALL RESOURCES ARE ACCESSIBLE TO ALL USERS WITH OR WITHOUT AUTHENTICATION
         httpSecurity.authorizeHttpRequests(http -> http
                 // Permetti accesso pubblico agli URL del WebController
-                .requestMatchers(HttpMethod.GET, "/bettellipavimenti/**").permitAll()
+                .requestMatchers(HttpMethod.GET, "/testpiastrellista/**").permitAll()
                 // Permetti accesso pubblico ai GET di /blog e /blog/{blogId}
                 .requestMatchers(HttpMethod.GET, "/blog", "/blog/**").permitAll()
                 // Richiedi autenticazione e ruolo ADMIN per POST, PUT, DELETE su /blog/**
