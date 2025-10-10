@@ -15,7 +15,7 @@ public class CorsConfig {
     @Bean
     CorsConfigurationSource corsConfigurationSource(){
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(Arrays.asList("http://testpiastrellista.local", "http://testpiastrellista.local:8090", "http://localhost:5173", "http://31.97.47.207"));
+        config.setAllowedOrigins(Arrays.asList("http://testpiastrellista.local", "http://testpiastrellista.local:8080", "http://localhost:5173", "http://31.97.47.207"));
         config.setAllowedMethods(Arrays.asList("*"));
         config.setAllowedHeaders(Arrays.asList("*"));
 
